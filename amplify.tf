@@ -3,7 +3,7 @@ resource "aws_amplify_app" "example" {
   repository = "https://github.com/deemoney14/project10"  # Replace with your repo URL
   oauth_token = var.github_token  # GitHub token for authentication (or use other authentication)
 
-  build_spec = file("amplify-build-spec.yml")  # Path to build spec if any (optional)
+ build_spec = file("portfolio/amplify-build-spec.yml") # Path to build spec if any (optional)
   
   environment_variables = {
     MY_ENV_VAR = "value"  # Add any required environment variables

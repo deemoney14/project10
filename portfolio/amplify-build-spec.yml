@@ -1,0 +1,17 @@
+version: 1
+applications:
+  - appRoot: .
+    backend:
+      phases:
+        build:
+          commands:
+            - echo "Building Amplify app"
+    frontend:
+      phases:
+        build:
+          commands:
+            - echo "Building frontend"
+        artifacts:
+          baseDirectory: build
+          files:
+            - '**/*'
