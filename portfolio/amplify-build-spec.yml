@@ -1,17 +1,17 @@
-version: 1
-applications:
-  - appRoot: .
-    backend:
-      phases:
-        build:
-          commands:
-            - echo "Building Amplify app"
-    frontend:
-      phases:
-        build:
-          commands:
-            - echo "Building frontend"
-        artifacts:
-          baseDirectory: build
-          files:
-            - '**/*'
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies...
+  build:
+    commands:
+      - echo Building the project...
+  post_build:
+    commands:
+      - echo Post build tasks...
+
+artifacts:
+  files:
+    - '**/*'
+  base_directory: build
